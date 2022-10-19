@@ -14,7 +14,7 @@ See the *nice_plotting.ipynb* and the *tkinter_evaluating.ipynb* files for use e
 The code implements, trains and evaluates the *Multi SWAG* models. For the implementation of SWAG we use the code in the */swag* directory by [Pavel Izmailov](https://github.com/izmailovpavel/understandingbdl). Data sets are generated using the code in the */andi-code* directory by [Gorka Muñoz](https://github.com/AnDiChallenge/andi_datasets). See the *LICENSE* files in the corresponding directories.
 
 In the main directory one may find the following files:
-- *LSTM_Neural_Network.py*: implementation of the Neural Network Architectures used for the models
+- *LSTM_Neural_Network.py*: implementation of the neural network architectures used for the models
 - *swag_lr_scheduler.py*: custom learning rate scheduler used in training
 - *load_andi_dataset.py*: different classes for creating and loading datasets from saved files
 - *create_andi_datasets.ipynb*: used for creating dataset files loaded in *load_andi_dataset.py*, note that later some datasets mainly use the saved trajectories feature of the *andi datasets* package
