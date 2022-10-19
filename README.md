@@ -11,5 +11,5 @@ All data files include the true/predicted values for each trajectory in the test
 See the *nice_plotting.ipynb* and the *tkinter_evaluating.ipynb* files for use examples.
 
 ## Code
-The code implements, trains and evaluates the *Multi SWAG* models. For the implementation of SWAG we use the code provided by [Pavel Izmailov](https://github.com/izmailovpavel/understandingbdl). Data sets are generated using the code provided by Gorka Muñoz(https://github.com/AnDiChallenge/andi_datasets).
+The code implements, trains and evaluates the *Multi SWAG* models. For the implementation of SWAG we use the code provided by [Pavel Izmailov](https://github.com/izmailovpavel/understandingbdl). Data sets are generated using the code provided by [Gorka Muñoz](https://github.com/AnDiChallenge/andi_datasets).
 
