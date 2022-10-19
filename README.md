@@ -8,6 +8,7 @@ The file names correspond to different trajectory lengths, tasks or models.
 All data files include the true/predicted values for each trajectory in the test set in the following order:
 - regression: [true exponent, predicted exponent, predicted standard deviation, true model, true noise]
 - classification: [true model, confidence model 1, ..., confidence model 5, true exponent, true noise]
+
 See the *nice_plotting.ipynb* and the *tkinter_evaluating.ipynb* files for use examples.
 
 ## Code
