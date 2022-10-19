@@ -1,4 +1,4 @@
-#Copyright (c) 2019, Wesley Maddox, Timur Garipov, Pavel Izmailov,  Dmitry Vetrov, Andrew Gordon Wilson
+#Copyright (c) 2020, Pavel Izmailov
 #see the included LICENSE file
 
 import itertools
