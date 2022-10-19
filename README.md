@@ -9,7 +9,7 @@ All data files include the true/predicted values for each trajectory in the test
 - regression: [true exponent, predicted exponent, predicted standard deviation, true model, true noise]
 - classification: [true model, confidence model 1, ..., confidence model 5, true exponent, true noise]
 
-See the *nice_plotting.ipynb* and the *tkinter_evaluating.ipynb* files for use examples.
+See the ***nice_plotting.ipynb*** and the ***tkinter_evaluating.ipynb*** files for use examples.
 
 ## Code
 The code implements, trains and evaluates the *Multi SWAG* models. For the implementation of SWAG we use the code in the */swag* directory by [Pavel Izmailov](https://github.com/izmailovpavel/understandingbdl). Data sets are generated using the code in the */andi-code* directory by [Gorka Muñoz](https://github.com/AnDiChallenge/andi_datasets). See the *LICENSE* files in the corresponding directories.
