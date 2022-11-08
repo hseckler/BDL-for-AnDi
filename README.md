@@ -1,4 +1,4 @@
-# [Bayesian deep learning for error estimation in the analysis of anomalous diffusion](https://doi.org/10.21203/rs.3.rs-1902000/v1)
+# [Bayesian deep learning for error estimation in the analysis of anomalous diffusion](https://www.nature.com/articles/s41467-022-34305-6)
 
 
 
