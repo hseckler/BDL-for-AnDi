@@ -190,8 +190,6 @@ class AnDi_super_dataset(Dataset):
 #create a standard andi dataset (classification or regression) from saved trajectories        
 class AnDi_dataset_from_saved_trajs(Dataset):
 	def __init__(self, path = "datasets/trajectories/", task = 1, dim = 1, N_total = 100000, T = 100, N_save = 10000, use_increments = False):
-		if dim != 1:
-			print("dataset and normalization may not yet be set up for higher dimensions!")
 		if type(T) == type(100):
 			min_T = T
 			max_T = T+1
@@ -209,7 +207,7 @@ class AnDi_dataset_from_saved_trajs(Dataset):
 			labels = Y2[dim-1]
 		
 		self.n_samples = len(labels)
-		trajectories = np.asarray(trajectories).reshape((self.n_samples,T,dim))
+		trajectories = np.asarray(trajectories).reshape((self.n_samples,dim,T)).transpose(0,2,1)
 		#normalize trajectories
 		if type(T) == type(100):
 			trajectories = np.apply_along_axis(normalize, 1, trajectories)
@@ -248,8 +246,6 @@ class AnDi_dataset_from_saved_trajs(Dataset):
 #this is the version for doing so from saved trajectories
 class AnDi_super_dataset_from_saved_trajs(Dataset):
 	def __init__(self, path = "datasets/trajectories/testset/", task = 1, dim = 1, N_total = 10000, T = 100, N_save = 500, use_increments = False):
-		if dim != 1:
-			print("dataset and normalization may not yet be set up for higher dimensions!")
 		if type(T) == type(100): #generate at just one trajectory length
 			min_T = T
 			max_T = T+1
@@ -268,7 +264,7 @@ class AnDi_super_dataset_from_saved_trajs(Dataset):
 			labels = np.asarray(Y2[dim-1])
 		
 		self.n_samples = len(labels)
-		trajectories = np.asarray(trajectories).reshape((self.n_samples,T,dim))
+		trajectories = np.asarray(trajectories).reshape((self.n_samples,dim,T)).transpose(0,2,1)
 		
 		#normalize trajectories
 		if type(T) == type(100):
@@ -306,8 +302,6 @@ class SingleModel_dataset_from_saved_trajs(Dataset):
 	def __init__(self, path = "datasets/trajectories/", task = 1, dim = 1, N_total = 100000, T = 100, N_save = 10000, use_increments = False, model = 0):
 		task = 1 #since there is only one model classification is not needed, only task 1 therefore
 		
-		if dim != 1:
-			print("dataset and normalization may not yet be set up for higher dimensions!")
 		if type(T) == type(100):
 			min_T = T
 			max_T = T+1
@@ -344,7 +338,7 @@ class SingleModel_dataset_from_saved_trajs(Dataset):
 		labels = np.asarray(Ys1)
 		
 		self.n_samples = len(labels)
-		trajectories = np.asarray(trajectories).reshape((self.n_samples,T,dim))
+		trajectories = np.asarray(trajectories).reshape((self.n_samples,dim,T)).transpose(0,2,1)
 		#normalize trajectories
 		if type(T) == type(100):
 			trajectories = np.apply_along_axis(normalize, 1, trajectories)
@@ -378,8 +372,6 @@ class SingleModel_superdataset_from_saved_trajs(Dataset):
 	def __init__(self, path = "datasets/trajectories/", task = 1, dim = 1, N_total = 100000, T = 100, N_save = 10000, use_increments = False, model = 0):
 		task = 1 #since there is only one model classification is not needed, only task 1 therefore
 		
-		if dim != 1:
-			print("dataset and normalization may not yet be set up for higher dimensions!")
 		if type(T) == type(100):
 			min_T = T
 			max_T = T+1
@@ -417,7 +409,7 @@ class SingleModel_superdataset_from_saved_trajs(Dataset):
 		labels = np.asarray(Ys1)
 		#print(labels)
 		self.n_samples = len(labels)
-		trajectories = np.asarray(trajectories).reshape((self.n_samples,T,dim))
+		trajectories = np.asarray(trajectories).reshape((self.n_samples,dim,T)).transpose(0,2,1)
 		#normalize trajectories
 		if type(T) == type(100):
 			trajectories = np.apply_along_axis(normalize, 1, trajectories)
