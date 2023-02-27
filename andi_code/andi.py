@@ -1021,7 +1021,6 @@ class andi_datasets():
             
             #add noise value to dataset
             loc_error_amplitude = loc_error_amplitude.reshape(-1,dim)
-            loc_error_amplitude = loc_error_amplitude.mean(axis=1)
             dataset = np.concatenate((loc_error_amplitude.reshape(-1,1),dataset),axis=1)
             #swap around to have form [model,exponent,noise,x_0,x_1,...]
             dataset[:,[0,2]] = dataset[:,[2,0]]
